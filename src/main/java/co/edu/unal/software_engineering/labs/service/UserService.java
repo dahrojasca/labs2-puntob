@@ -36,4 +36,8 @@ public class UserService{
         return correctness;
     }
 
+    public Integer findById(String username){
+        return userRepository.findById(username).getId();
+    }
+
 }

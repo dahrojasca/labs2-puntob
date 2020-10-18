@@ -63,4 +63,13 @@ public class UserController{
         return new ResponseEntity<>( HttpStatus.CREATED );
     }
 
+    @GetMapping(value = {"/userfindById/{username}"})
+    public Integer userbyname(@PathVariable String username) {
+        Integer User = userService.findByUsername(username).getId();
+            
+            return User;
+        
+            }
+    
+
 }
